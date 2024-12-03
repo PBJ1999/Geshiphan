@@ -1,0 +1,25 @@
+조원이 프로젝트를 받았을 때 해야 할 일
+프로젝트 클론:
+
+다른 조원이 GitHub에서 프로젝트를 클론 받습니다.
+
+코드 복사
+
+git clone https://github.com/username/project-name.git
+cd project-name(자신이 받고자 하는 파일명)
+
+의존성 설치:
+
+node_modules 폴더는 클론받은 프로젝트에 포함되지 않기 때문에, 의존성을 설치하기 위해 npm install 또는 yarn install 명령어를 실행해야 합니다.
+
+npm install
+또는
+yarn install
+
+이 명령어는 package.json 파일에 정의된 모든 의존성(패키지들)을 설치하여 node_modules 폴더를 생성합니다. 이렇게 되면 프로젝트가 로컬 환경에서 정상적으로 동작하게 됩니다.
+
+요약
+node_modules 폴더는 GitHub에 푸시되지 않습니다.
+
+조원이 프로젝트를 클론 받은 후, npm install 또는 yarn install 명령어를 실행하면 필요한 모든 의존성들이 자동으로 설치됩니다.
+이렇게 함으로써 node_modules는 항상 각 개발 환경에서 설치되어 사용되므로, Git에서 node_modules를 관리할 필요가 없습니다.
